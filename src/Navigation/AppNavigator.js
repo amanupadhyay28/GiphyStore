@@ -8,28 +8,12 @@ import {View, Text} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
-const ThemeIcon = () => {
-  const {theme, toggleTheme} = useTheme();
-  return (
-    <Text
-      style={{
-        fontSize: 18,
-        color: theme === 'light' ? '#000' : '#fff',
-        marginRight: 10,
-      }}
-      onPress={toggleTheme}>
-      {theme === 'light' ? '🌞' : '🌙'}
-    </Text>
-  );
-};
-
 const AppNavigator = () => {
   const {theme} = useTheme();
 
   return (
     <Tab.Navigator
       screenOptions={{
-        headerRight: () => <ThemeIcon />,
         tabBarStyle: {
           backgroundColor: theme === 'light' ? '#662d91' : '#333',
         },

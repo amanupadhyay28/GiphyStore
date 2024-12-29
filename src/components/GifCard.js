@@ -87,7 +87,7 @@ const GifCard = ({gif}) => {
           source={{
             uri: isPlaying
               ? gif.images.original.url
-              : gif.images.original_still.url,
+        : gif.images.original_still.url,      
           }}
           resizeMode={FastImage.resizeMode.cover}
           style={styles.gifImage}
